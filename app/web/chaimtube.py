@@ -26,7 +26,7 @@ def db_connect():
     while check == 1:
         try:
             check = 0
-            db = pymysql.connect(host='localhost', user='root', passwd='pass', db='chaimtube', autocommit=True)
+            db = pymysql.connect(host='chaimtube_db', user='root', passwd='pass', db='chaimtube', autocommit=True)
         except pymysql.err.OperationalError:
             check = 1
 
