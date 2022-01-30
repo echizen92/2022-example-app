@@ -48,7 +48,7 @@ jobs:
           python tests/test_04.py
           
           
-  delpoy:
+  deploy:
     needs: test
     runs-on: ubuntu-latest
 
@@ -75,4 +75,5 @@ jobs:
           file: ./app/web/Dockerfile
           builder: ${{ steps.buildx.outputs.name }}
           push: true
-          tags: tobe updated
+          tags: sristisravan/tic4302-demo:latest
+
